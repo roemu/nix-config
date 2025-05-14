@@ -5,6 +5,7 @@
 		./neovim.nix  
 		./starship.nix	
 		./tmux.nix    	
+		./tms.nix
 	];
 	programs.bat = {
     		enable = true;

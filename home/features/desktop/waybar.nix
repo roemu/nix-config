@@ -266,11 +266,10 @@ in {
 		  grim
 		  hyprcursor
 		  hyprlock
-		  hyprpaper
 		  qt6.qtwayland
 		  slurp
 		  waypipe
-		  pinned.wl-clipboard
+		  wl-clipboard
 		  wf-recorder
 		  wl-mirror
 		  wlogout

@@ -5,6 +5,7 @@ in {
 	options.features.desktop.hyprland.enable = lib.mkEnableOption "Enable extended hyprland configuration";
 
 	config = lib.mkIf cfg.enable {
+		home.packages = [pkgs.kitty];
 		wayland.windowManager.hyprland = {
 			settings = {
 				  xwayland = {
@@ -13,7 +14,8 @@ in {
 
 				  exec-once = [
 					# "hyprpanel"
-					# "hyprpaper"
+					"waypaper --random"
+					"ghostty"
 					# "hypridle"
 					# "wl-paste --type text --watch cliphist store" # Stores only text data
 					# "wl-paste --type image --watch cliphist store" # Stores only image data "wl-paste -p -t text --watch clipman store -P --histpath=\"~/.local/share/clipman-primary.json\""
@@ -131,24 +133,17 @@ in {
 					"pin,title:^(floating-pomodoro)$"
 				  ];
 
-				  "$mainMod" = "SUPER";
+				  "$mainMod" = "CTRL";
 
 				  bind = [
-					"$mainMod, return, exec, nu -c zellij-ps"
-					# "$mainMod, t, exec, warp-terminal"
 					"$mainMod, t, exec, ghostty"
 					"$mainMod, o, exec, hyprctl setprop activewindow opaque toggle"
 					"$mainMod, Escape, exec, wlogout -p layer-shell"
 					"$mainMod, Space, togglefloating"
+					"$mainMod, F, fullscreen"
 					"$mainMod, q, killactive"
 					"$mainMod, M, exit"
-					"$mainMod, F, fullscreen"
-					"$mainMod SHIFT, V, togglefloating"
-					"$mainMod, D, exec, rofi -show"
-					"$mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
-					"$mainMod SHIFT, S, exec, bemoji"
-					"$mainMod, P, exec, rofi-pass"
-					"$mainMod SHIFT, P, pseudo"
+					"$mainMod, D, exec, wofi --config ~/.config/wofi/config --style ~/.config/wofi/style.css"
 					"$mainMod, J, togglesplit"
 					"$mainMod, h, movefocus, l"
 					"$mainMod, l, movefocus, r"

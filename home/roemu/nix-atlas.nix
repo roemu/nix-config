@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ ... }: {
 	imports = [ 
 		./home.nix 
 		../common 
@@ -12,12 +12,15 @@
 			neofetch.enable = true;
 			tmux.enable = true;
 			starship.enable = true;
+			tms.enable = true;
 		};
 		desktop = {
 			ghostty.enable = true;
 			zen-browser.enable = true;
 			hyprland.enable = true;
 			waybar.enable = true;
+			waypaper.enable = true;
+			wofi.enable = true;
 		};
 	};
 }
