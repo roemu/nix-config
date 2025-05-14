@@ -11,11 +11,6 @@
 	networking.hostName = "nix-atlas";
 
 	networking.networkmanager.enable = true;
-	services.openssh = {
-		enable = true;
-		settings.PermitRootLogin = "no";
-		allowSFTP = true;
-	};
 
 	time.timeZone = "Europe/Zurich";
 	i18n.defaultLocale = "en_US.UTF-8";
@@ -30,15 +25,16 @@
 		LC_TELEPHONE = "de_CH.UTF-8";
 		LC_TIME = "de_CH.UTF-8";
 	};
-	services.xserver.xkb = {
-		layout = "za";
-		variant = "";
-	};
 
 	environment.systemPackages = with pkgs; [
 		git
 		neovim
+		kdePackages.qtwayland
 	];
+
+	environment.sessionVariables = {
+		NIXOS_OZONE_WL = "1";
+	};
 
 	system.stateVersion = "24.05";
 }
