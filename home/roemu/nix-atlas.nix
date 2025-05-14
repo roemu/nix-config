@@ -1,0 +1,23 @@
+{ config, ... }: {
+	imports = [ 
+		./home.nix 
+		../common 
+		../features/cli 
+		../features/desktop
+	]; 
+	features = {
+		cli = {
+			zsh.enable = true;
+			neovim.enable = true;
+			neofetch.enable = true;
+			tmux.enable = true;
+			starship.enable = true;
+		};
+		desktop = {
+			ghostty.enable = true;
+			zen-browser.enable = true;
+			hyprland.enable = true;
+			waybar.enable = true;
+		};
+	};
+}
