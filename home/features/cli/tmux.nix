@@ -50,13 +50,13 @@ in {
 				set -sg escape-time 5
 			'';
 		};
-		# catppuccin.tmux.extraConfig = ''
-		# 	set -g @catppuccin_window_number_position "right"
-		# 	set -g @catppuccin_window_status_style "rounded"
-		# 	set -g @catppuccin_window_text "#W"
-		# 	set -g @catppuccin_window_current_text "#W"
-		# 	set -g @catppuccin_pane_active_border_style "fill=default bg=default fg=black"
-		# 	set -g @catppuccin_pane_border_style "fill=default bg=default fg=black"
-		# '';
+		catppuccin.tmux.extraConfig = ''
+			set -g @catppuccin_window_number_position "right"
+			set -g @catppuccin_window_status_style "rounded"
+			set -g @catppuccin_window_text "#W"
+			set -g @catppuccin_window_current_text "#W"
+			set -g @catppuccin_pane_active_border_style "fill=default bg=default fg=black"
+			set -g @catppuccin_pane_border_style "fill=default bg=default fg=black"
+		'';
 	};
 }

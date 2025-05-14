@@ -1,10 +1,12 @@
-{ ... }: {
+{ inputs, ... }: {
 	imports = [ 
 		./home.nix 
 		../common 
 		../features/cli 
 		../features/desktop
+		inputs.catppuccin.homeModules.catppuccin
 	]; 
+	catppuccin.enable = true;
 	features = {
 		cli = {
 			zsh.enable = true;
