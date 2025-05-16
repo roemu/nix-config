@@ -21,8 +21,13 @@
 			zen-browser.enable = true;
 			hyprland.enable = true;
 			waybar.enable = true;
-			waypaper.enable = true;
+			hyprpaper.enable = true;
 			wofi.enable = true;
 		};
+	};
+	wayland.windowManager.hyprland.settings = {
+		monitor = [
+			"DP-1,3840x2160@144Hz,0x0,1.5"
+		];
 	};
 }

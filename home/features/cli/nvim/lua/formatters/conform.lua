@@ -25,6 +25,7 @@ return {
 			["graphql"] = { "prettier" },
 			["handlebars"] = { "prettier" },
 			["angular"] = { "prettier" },
+			["nix"] = { "alejandra" },
 		},
 	},
 }

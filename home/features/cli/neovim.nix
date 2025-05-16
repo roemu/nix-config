@@ -17,6 +17,7 @@ in {
 			pkgs.nil
 			pkgs.helm-ls
 			pkgs.yaml-language-server
+			pkgs.alejandra
 		];
 
 		programs.neovim = {

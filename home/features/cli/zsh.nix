@@ -15,6 +15,7 @@ in {
 				ll = "ls -alh --color";
 				cat = "bat --theme=\"base16-256\"";
 				cd = "z";
+				sudo = "/run/wrappers/bin/sudo";
 			};
 			history = {
 				size = 10000;

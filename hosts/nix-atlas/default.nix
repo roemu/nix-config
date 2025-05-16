@@ -1,3 +1,8 @@
 {
-  imports = [ ../common ./configuration.nix ./programs.nix ];
+	imports = [
+		../common
+		./configuration.nix
+		./programs.nix
+		./services.nix
+	];
 }

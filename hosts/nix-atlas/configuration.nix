@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, config, ... }:
 {
 	imports = [
 		./hardware-configuration.nix
@@ -34,6 +34,16 @@
 
 	environment.sessionVariables = {
 		NIXOS_OZONE_WL = "1";
+	};
+
+	hardware.graphics.enable = true;
+	hardware.nvidia = {
+		modesetting.enable = true;
+		package = config.boot.kernelPackages.nvidiaPackages.stable;
+		open = false;
+		nvidiaSettings = false;
+		powerManagement.enable = false;
+		powerManagement.finegrained = false;
 	};
 
 	system.stateVersion = "24.05";

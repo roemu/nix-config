@@ -6,5 +6,6 @@
 		./waybar.nix
 		./waypaper.nix
 		./wofi.nix
+		./hyprpaper.nix
 	];
 }
