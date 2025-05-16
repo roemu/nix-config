@@ -5,9 +5,10 @@ in {
 	options.features.desktop.hyprpaper.enable = lib.mkEnableOption "Enable extended hyprpaper configuration";
 
 	config = lib.mkIf cfg.enable {
-		home.packages = [
-			pkgs.hyprpaper
-		];
+		services.hyprpaper.enable = true;
+		services.hyprpaper.settings = {
+			ipc = true;
+		};
 		home.file."wallpapers".source = ./wallpapers;
 		home.file."bin/random-wallpaper" = {
 			executable = true;
