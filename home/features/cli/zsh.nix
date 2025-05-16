@@ -31,15 +31,6 @@ in {
 				XDG_CONFIG_HOME="$HOME/.config";
 				KEYTIMEOUT=1;
 			};
-			loginExtra = ''
-				set -x NIX_PATH nixpkgs=channel:nixos-unstable
-				set -x NIX_LOG info
-				set -x TERMINAL ghostty
-				
-				if [ "$(tty)" = "/dev/tty1" ]; then
-					exec hyprland
-				fi
-			'';
 
 			initContent = ''
 				bindkey -v

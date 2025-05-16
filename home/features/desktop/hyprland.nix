@@ -47,8 +47,8 @@ in {
           "col.inactive_border" = "rgba(000000FF)";
           "col.active_border" = "rgb(cba6f7) rgb(f5c2e7) 45deg";
 
-		  resize_on_border = true;
-		  allow_tearing = false;
+          resize_on_border = true;
+          allow_tearing = false;
 
           layout = "dwindle";
         };
@@ -196,6 +196,17 @@ in {
           "$mainMod, mouse:273, resizewindow"
         ];
       };
+    };
+    programs.zsh = {
+      loginExtra = ''
+        set -x NIX_PATH nixpkgs=channel:nixos-unstable
+        set -x NIX_LOG info
+        set -x TERMINAL ghostty
+
+        if [ "$(tty)" = "/dev/tty1" ]; then
+        	exec hyprland
+        fi
+      '';
     };
   };
 }

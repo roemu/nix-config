@@ -38,6 +38,10 @@
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/nix-atlas];
       };
+      nix-boreas = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/nix-boreas];
+      };
     };
     homeConfigurations = {
       "roemu@nix-atlas" = home-manager.lib.homeManagerConfiguration {
