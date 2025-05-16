@@ -11,6 +11,7 @@ in {
 		home.file.".config/ghostty/config".text = ''
 			background-opacity = 0.9
 			background-blur = true
+			keybind = ctrl+v=paste_from_clipboard
 		'';
 	};
 }
