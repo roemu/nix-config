@@ -10,4 +10,10 @@
 		enable = true;
 		dedicatedServer.openFirewall = true;
 	};
+
+	programs.ssh.extraConfig = ''
+	Host nix-boreas
+		HostName 95.216.153.161
+		Port 2222
+	'';
   }
