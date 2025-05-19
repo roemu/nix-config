@@ -205,12 +205,12 @@ in {
             on-scroll-down = "hyprctl dispatch workspace e-1";
             format-icons = {
               "1" = "";
-              "2" = "";
-              "3" = "";
-              "4" = "";
-              "5" = "";
-              "6" = "";
-              "7" = "";
+              "2" = "";
+              "3" = "";
+              "4" = "";
+              "5" = "";
+              "6" = "";
+              "7" = "";
             };
             persistent_workspaces = {
               "1" = [];
@@ -231,7 +231,7 @@ in {
             spacing = 10;
           };
           clock = {
-            format = " {:%R   %d/%m}";
+            format = " {:%R   %d.%m}";
             tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           };
           pulseaudio = {
@@ -279,6 +279,7 @@ in {
       wtype
       ydotool
 	  wttrbar
+	  pamixer
     ];
   };
 }
