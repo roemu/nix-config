@@ -73,7 +73,7 @@ in {
             ignore_opacity = false;
             brightness = 1;
             xray = false;
-            vibrancy = 0.30000000000000004;
+            vibrancy = 0.3;
             vibrancy_darkness = 0.05;
             contrast = 1.0;
             popups = true;
