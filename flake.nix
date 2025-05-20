@@ -13,6 +13,8 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
     catppuccin.url = "github:catppuccin/nix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -41,6 +43,12 @@
       nix-boreas = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/nix-boreas];
+      };
+    };
+    darwinConfigurations = {
+      nix-hephaestus = inputs.nix-darwin.lib.darwinSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/nix-hephaestus];
       };
     };
     homeConfigurations = {

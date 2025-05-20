@@ -1,9 +1,9 @@
 {
 	imports = [
 		../common
-		../common/users/roemu.nix
+		../common/users/romansuter.nix
+		./services
 		./configuration.nix
 		./programs.nix
-		./services
 	];
 }
