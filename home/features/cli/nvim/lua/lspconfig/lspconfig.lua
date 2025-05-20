@@ -54,7 +54,7 @@ vim.lsp.config.helm_ls = {
 	filetypes = { 'helm', 'helmfile' },
 	root_markers = { 'Chart.yaml' },
 	settings = {
-		['helm-ls' ]= {
+		['helm-ls'] = {
 			yamlls = {
 				path = 'yaml-language-server'
 			}
@@ -86,87 +86,29 @@ vim.lsp.config.emmet_ls = {
 	filetypes = { 'html', 'angular', 'scss', 'css' },
 }
 
--- vim.lsp.config.json_ls = {
--- }
--- vim.lsp.config.css_ls = {
--- }
--- vim.lsp.config.html_ls = {
--- }
-
 vim.lsp.config('*', {
 	root_markers = { '.git' },
 	capabilities = vim.lsp.protocol.make_client_capabilities(),
 })
-vim.lsp.enable({ 'emmet_ls', 'bash_ls', 'gopls', 'openscad_ls', 'yaml_ls', 'helm_ls', 'clangd_ls', 'nil_ls', 'lua_ls', 'ts_ls', 'angular_ls' })
+vim.lsp.enable({ 'emmet_ls', 'bash_ls', 'gopls', 'openscad_ls', 'yaml_ls', 'helm_ls', 'clangd_ls', 'nil_ls', 'lua_ls',
+	'ts_ls', 'angular_ls' })
 
 return {
-	'neovim/nvim-lspconfig',
-	event = 'VeryLazy',
-	dependencies = {
-		{
-			'williamboman/mason.nvim',
-			config = true,
+	'mason-org/mason-lspconfig.nvim',
+	opts = {
+		ensure_installed = {
+			jdtls = { filetypes = { 'java' } }
 		},
+		automatic_enable = false,
+	},
+	dependencies = {
+		{ 'mason-org/mason.nvim', opts = {} },
 		{
-			'williamboman/mason-lspconfig.nvim',
+			'neovim/nvim-lspconfig',
+			-- opts = {
+			-- 	inlay_hints = { enabled = true }
+			-- },
 		},
 		{ 'j-hui/fidget.nvim', lazy = true, opts = {} },
 	},
-	opts = {
-		inlay_hints = { enabled = true }
-	},
-	config = function()
-		local on_attach = function(_, _)
-			-- Create a command `:Format` local to the LSP buffer
-		end
-
-		-- document existing key chains
-		require("which-key").add({
-				{ "<leader>c", group = "[C]ode" },
-				{ "<leader>g", group = "[G]it" },
-				{ "<leader>r", group = "[R]ename" },
-				{ "<leader>s", group = "[S]earch" },
-				{ "<leader>t", group = "[T]oggle" },
-				{ "<leader>w", group = "[W]orkspace" },
-				{ "<leader>h", group = "Git [H]unk" },
-			},
-			{
-				mode = { "v", "n" },
-				{ "<leader>", 'VISUAL <leader>' },
-			}
-		)
-
-		require('mason').setup()
-		require('mason-lspconfig').setup()
-
-		local servers = {
-			-- jsonls = { filetypes = { 'json' } },
-			-- cssls = { filetypes = { 'css', 'scss', 'sass' } },
-			-- html = { filetypes = { 'html', 'angular' } },
-			jdtls = { filetypes = { 'java' } }
-		}
-
-		-- local capabilities = vim.lsp.protocol.make_client_capabilities()
-		-- capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-		-- Ensure the servers above are installed
-		local mason_lspconfig = require 'mason-lspconfig'
-
-		mason_lspconfig.setup {
-			ensure_installed = vim.tbl_keys(servers),
-		}
-
-		-- mason_lspconfig.setup_handlers {
-		-- 	function(server_name)
-		-- 		if server_name ~= 'jdtls' then
-		-- 			require('lspconfig')[server_name].setup {
-		-- 				capabilities = capabilities,
-		-- 				on_attach = on_attach,
-		-- 				settings = servers[server_name],
-		-- 				filetypes = (servers[server_name] or {}).filetypes,
-		-- 			}
-		-- 		end
-		-- 	end,
-		-- }
-	end
 }
