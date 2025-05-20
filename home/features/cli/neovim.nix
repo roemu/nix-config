@@ -4,6 +4,7 @@ let
 in {
 	options.features.cli.neovim.enable = lib.mkEnableOption "Enable extended neovim configuration";
 
+	
 	config = lib.mkIf cfg.enable {
 		home.packages = [
 			pkgs.gnumake
@@ -21,8 +22,18 @@ in {
 			pkgs.gopls
 			pkgs.bash-language-server
 			pkgs.emmet-ls
-			pkgs.jdk21_headless
+			pkgs.openscad-lsp
+			pkgs.libclang
 		];
+
+		programs.java = {
+			enable = true;
+			package = pkgs.jdk21_headless;
+		};
+
+		programs.zsh.sessionVariables = {
+			JAVA_HOME = "${pkgs.jdk21_headless}";
+		};
 
 		programs.neovim = {
 			enable = true;
