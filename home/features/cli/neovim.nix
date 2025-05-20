@@ -18,6 +18,10 @@ in {
 			pkgs.helm-ls
 			pkgs.yaml-language-server
 			pkgs.alejandra
+			pkgs.gopls
+			pkgs.bash-language-server
+			pkgs.emmet-ls
+			pkgs.jdk21_headless
 		];
 
 		programs.neovim = {

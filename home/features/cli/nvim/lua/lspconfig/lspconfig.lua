@@ -72,10 +72,32 @@ vim.lsp.config.openscad_ls = {
 	filetypes = { 'scad', 'openscad' },
 }
 
+vim.lsp.config.gopls = {
+	cmd = { 'gopls' },
+	filetypes = { 'go' },
+}
+
+vim.lsp.config.bash_ls = {
+	cmd = { 'bash-language-server', 'start' },
+	filetypes = { 'bash', 'sh' },
+}
+vim.lsp.config.emmet_ls = {
+	cmd = { 'emmet-ls', '--stdio' },
+	filetypes = { 'html', 'angular', 'scss', 'css' },
+}
+
+-- vim.lsp.config.json_ls = {
+-- }
+-- vim.lsp.config.css_ls = {
+-- }
+-- vim.lsp.config.html_ls = {
+-- }
+
 vim.lsp.config('*', {
 	root_markers = { '.git' },
+	capabilities = vim.lsp.protocol.make_client_capabilities(),
 })
-vim.lsp.enable({ 'openscad_ls', 'yaml_ls', 'helm_ls', 'clangd_ls', 'nil_ls', 'lua_ls', 'ts_ls', 'angular_ls' })
+vim.lsp.enable({ 'emmet_ls', 'bash_ls', 'gopls', 'openscad_ls', 'yaml_ls', 'helm_ls', 'clangd_ls', 'nil_ls', 'lua_ls', 'ts_ls', 'angular_ls' })
 
 return {
 	'neovim/nvim-lspconfig',
@@ -89,7 +111,6 @@ return {
 			'williamboman/mason-lspconfig.nvim',
 		},
 		{ 'j-hui/fidget.nvim', lazy = true, opts = {} },
-		'folke/neodev.nvim',
 	},
 	opts = {
 		inlay_hints = { enabled = true }
@@ -119,19 +140,14 @@ return {
 		require('mason-lspconfig').setup()
 
 		local servers = {
-			jsonls = { filetypes = { 'json' } },
-			bashls = { filetypes = { 'sh' } },
-			gopls = { filetypes = { 'go' } },
-			cssls = { filetypes = { 'css', 'scss', 'sass' } },
-			html = { filetypes = { 'html', 'angular' } },
-			emmet_ls = { filetypes = { 'html', 'angular', 'scss', 'css' } },
+			-- jsonls = { filetypes = { 'json' } },
+			-- cssls = { filetypes = { 'css', 'scss', 'sass' } },
+			-- html = { filetypes = { 'html', 'angular' } },
 			jdtls = { filetypes = { 'java' } }
 		}
-		-- Setup neovim lua configuration
-		require('neodev').setup()
 
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities.textDocument.completion.completionItem.snippetSupport = true
+		-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+		-- capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 		-- Ensure the servers above are installed
 		local mason_lspconfig = require 'mason-lspconfig'
@@ -140,17 +156,17 @@ return {
 			ensure_installed = vim.tbl_keys(servers),
 		}
 
-		mason_lspconfig.setup_handlers {
-			function(server_name)
-				if server_name ~= 'jdtls' then
-					require('lspconfig')[server_name].setup {
-						capabilities = capabilities,
-						on_attach = on_attach,
-						settings = servers[server_name],
-						filetypes = (servers[server_name] or {}).filetypes,
-					}
-				end
-			end,
-		}
+		-- mason_lspconfig.setup_handlers {
+		-- 	function(server_name)
+		-- 		if server_name ~= 'jdtls' then
+		-- 			require('lspconfig')[server_name].setup {
+		-- 				capabilities = capabilities,
+		-- 				on_attach = on_attach,
+		-- 				settings = servers[server_name],
+		-- 				filetypes = (servers[server_name] or {}).filetypes,
+		-- 			}
+		-- 		end
+		-- 	end,
+		-- }
 	end
 }
