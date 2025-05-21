@@ -25,6 +25,9 @@
       starship.enable = true;
       tms.enable = true;
     };
+	desktop = {
+		ghostty.enable = true;
+	};
   };
 
   programs.zsh.sessionVariables = {
