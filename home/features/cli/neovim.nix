@@ -24,6 +24,7 @@ in {
 			pkgs.emmet-ls
 			pkgs.openscad-lsp
 			pkgs.libclang
+			pkgs.nodejs_24
 		];
 
 		programs.java = {
