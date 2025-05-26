@@ -36,6 +36,7 @@ in {
 				bind -T copy-mode-vi 'y' send -X copy-selection
 
 				bind -n 'C-t' neww "tms"
+				bind -n 'C-h' switch-client -l
 
 				bind 'n' split-window -v -c "#{pane_current_path}"
 				bind 'v' split-window -h -c "#{pane_current_path}"
