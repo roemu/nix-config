@@ -36,7 +36,7 @@ vim.filetype.add({
 		['bru'] = 'bru',
 	}
 })
-vim.cmd(':au BufRead,BufEnter *.component.html set filetype=angular')
+vim.cmd(':au BufRead,BufEnter *.component.html set filetype=htmlangular')
 
 vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
