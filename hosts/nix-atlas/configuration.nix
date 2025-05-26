@@ -46,5 +46,7 @@
 		powerManagement.finegrained = false;
 	};
 
+	users.defaultUserShell = pkgs.zsh; # Moved to each host seperately due to darwin being dumb
+
 	system.stateVersion = "24.05";
 }

@@ -1,6 +1,5 @@
 {
   pkgs,
-  username,
   ...
 }: {
   system.activationScripts.preActivation = {
@@ -9,7 +8,7 @@
       if [ ! -d "/var/lib/postgresql/" ]; then
       	echo "creating PostgreSQL data directory..."
       	sudo mkdir -m 750 -p /var/lib/postgresql/
-      	chown -R ${username}:staff /var/lib/postgresql/
+      	chown -R romansuter:staff /var/lib/postgresql/
       fi
     '';
   };

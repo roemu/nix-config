@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   inputs,
   ...
 }: {
@@ -29,6 +30,8 @@
 		wezterm.enable = true;
 	};
   };
+
+  programs.starship.settings.right_format = lib.mkForce ""; # Due to https://github.com/starship/starship/issues/6524
 
   programs.zsh.sessionVariables = {
     STAGE = "local";

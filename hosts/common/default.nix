@@ -49,5 +49,5 @@
 			((lib.filterAttrs (_: lib.isType "flake")) inputs);
 		nixPath = [ "/etc/nix/path" ];
 	};
-	users.defaultUserShell = pkgs.zsh;
+	# users.defaultUserShell = pkgs.zsh; # Removed due to darwin not having this. Moved to each host seperately
 }

@@ -2,6 +2,7 @@
   modulesPath,
   inputs,
   lib,
+  pkgs,
   ...
 }: {
   imports = [
@@ -38,5 +39,6 @@
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  users.defaultUserShell = pkgs.zsh; # Moved to each host seperately due to darwin being dumb
   system.stateVersion = "24.05";
 }
