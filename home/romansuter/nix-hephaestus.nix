@@ -20,6 +20,7 @@
   features = {
     cli = {
       zsh.enable = true;
+	  zsh.enableSudoAlias = false;
       neovim.enable = true;
       neofetch.enable = true;
       tmux.enable = true;
