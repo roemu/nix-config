@@ -42,5 +42,6 @@
 		ripgrep
 		coreutils
 		less
+		wget
 	];
 }

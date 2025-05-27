@@ -25,6 +25,7 @@ in {
 			pkgs.openscad-lsp
 			pkgs.libclang
 			pkgs.nodejs_24
+			pkgs.maven
 		];
 
 		programs.java = {
