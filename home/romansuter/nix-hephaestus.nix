@@ -1,7 +1,7 @@
 {
-  pkgs,
   lib,
   inputs,
+  pkgs,
   ...
 }: {
   imports = [
@@ -13,7 +13,8 @@
   ];
 
   home.packages = [
-    pkgs.go
+  	pkgs.bruno
+	pkgs.bruno-cli
   ];
 
   catppuccin.enable = true;

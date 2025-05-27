@@ -11,6 +11,7 @@ in {
       description = "Enable sudo alias for /run/wrappers/bin/sudo";
       type = lib.types.bool;
       default = true;
+      example = false;
     };
   };
 
@@ -21,15 +22,17 @@ in {
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
 
-      shellAliases =
-        lib.mkIf cfg.enableSudoAlias {
-          sudo = "/run/wrappers/bin/sudo";
-        }
-        // {
+      shellAliases = lib.mkMerge [
+        {
           ll = "ls -alh --color";
           cat = "bat --theme=\"base16-256\"";
           cd = "z";
-        };
+        }
+        (lib.mkIf cfg.enableSudoAlias
+          {
+            sudo = "/run/wrappers/bin/sudo";
+          })
+      ];
       history = {
         size = 10000;
         path = "${config.xdg.dataHome}/zsh/history";

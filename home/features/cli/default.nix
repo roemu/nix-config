@@ -43,5 +43,6 @@
 		coreutils
 		less
 		wget
+		go
 	];
 }
