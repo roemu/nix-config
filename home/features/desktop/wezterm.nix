@@ -24,6 +24,7 @@ in {
 			config.macos_window_background_blur = 15
 			config.window_decorations = 'RESIZE'
 			config.enable_tab_bar = false;
+			config.enable_wayland = true
 
 			config.keys = {
 				{

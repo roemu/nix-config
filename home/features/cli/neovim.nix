@@ -26,6 +26,7 @@ in {
 			pkgs.libclang
 			pkgs.nodejs_24
 			pkgs.maven
+			pkgs.nodePackages.prettier
 		];
 
 		programs.java = {

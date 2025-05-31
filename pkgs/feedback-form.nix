@@ -27,5 +27,6 @@ buildGoModule rec {
     maintainers = with lib.maintainers; [
       roemu
     ];
+  	platforms = lib.platforms.all;
   };
 }
