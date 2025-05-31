@@ -28,7 +28,7 @@
       dock = {
         persistent-apps = [
           "${pkgs.wezterm}/Applications/WezTerm.app"
-          "${pkgs.callPackage ./arc-browser.nix {}}/Applications/Arc.app"
+		  "${pkgs.arc-browser-updated}/Applications/Arc.app"
           "/Applications/Microsoft Teams.app"
           "/Applications/Microsoft Outlook.app"
         ];
@@ -44,6 +44,6 @@
   environment.systemPackages = with pkgs; [
     git
     neovim
-	(pkgs.callPackage ./arc-browser.nix {})
+	arc-browser-updated
   ];
 }

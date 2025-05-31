@@ -34,10 +34,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Arc from The Browser Company";
     homepage = "https://arc.net/";
     maintainers = with lib.maintainers; [ donteatoreo ];
-    platforms = [
-      "aarch64-darwin"
-      "x86_64-darwin"
-    ];
+	platforms = lib.platforms.all;
+	badPlatforms = lib.platforms.linux;
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
 })
