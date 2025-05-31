@@ -1,7 +1,7 @@
 {
 	imports = [
 		../common
-		../common/users/roemu.nix
+		../common/users
 		./configuration.nix
 		./programs.nix
 		./services.nix
