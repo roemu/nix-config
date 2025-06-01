@@ -26,6 +26,7 @@ require('lazy').setup(
 	},
 	{
 		rocks = { enabled = false },
+    lockfile = vim.fn.expand("~/personal/nix-config/home/features/cli/nvim/lazy-lock.json"),
 		change_detection = {
 			notify = false,
 		},
