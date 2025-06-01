@@ -1,6 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   environment.systemPackages = with pkgs; [
