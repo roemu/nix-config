@@ -17,8 +17,6 @@ vim.keymap.set('n', '[c', '<cmd>cprev<CR>', { desc = 'Go to previous quickfix it
 vim.keymap.set('n', ']c', '<cmd>cnext<CR>', { desc = 'Go to next quickfix item' })
 vim.keymap.set('n', '<leader>el', vim.diagnostic.setloclist, { desc = '[E]rror [L]ist' })
 
--- vim.api.nvim_set_keymap("n", "gx", [[:execute '!open ' . shellescape(expand('<cfile>'), 1)<CR>]], {})
-
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
