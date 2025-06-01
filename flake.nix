@@ -44,6 +44,10 @@
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/nix-boreas];
       };
+      nix-artemis = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/nix-artemis];
+      };
     };
     darwinConfigurations = {
       nix-hephaestus = inputs.nix-darwin.lib.darwinSystem {
