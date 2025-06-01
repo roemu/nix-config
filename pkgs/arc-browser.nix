@@ -35,7 +35,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://arc.net/";
     maintainers = with lib.maintainers; [ donteatoreo ];
 	platforms = lib.platforms.all;
-	badPlatforms = lib.platforms.linux;
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
 })
