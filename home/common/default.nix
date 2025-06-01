@@ -1,5 +1,11 @@
-{ lib, outputs, pkgs, ... }: {
+{
+  lib,
+  outputs,
+  pkgs,
+  ...
+}: {
   nixpkgs = {
+    hostPlatform = lib.mkDefault "x86_64-linux";
     # You can add overlays here
     overlays = [
       # Add overlays your own flake exports (from overlays and pkgs dir):
@@ -27,7 +33,7 @@
   nix = {
     package = lib.mkDefault pkgs.nix;
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = ["nix-command" "flakes"];
       warn-dirty = false;
     };
   };
