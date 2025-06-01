@@ -1,3 +1,3 @@
 {
-	import = [./configuration.nix ./services ./programs ../common ../common/users];
+  import = [../common ../common/users ./configuration.nix ./services ./programs];
 }

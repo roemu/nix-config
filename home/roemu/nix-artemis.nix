@@ -1,5 +1,4 @@
 {
-  pkgs,
   inputs,
   ...
 }: {
@@ -12,7 +11,6 @@
   ];
 
   home.packages = [
-	pkgs.go
   ];
 
   catppuccin.enable = true;
