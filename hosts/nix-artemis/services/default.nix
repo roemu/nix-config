@@ -1,4 +1,5 @@
 {
+  imports = [./adguard-home.nix];
   services.openssh = {
     enable = true;
     settings = {
