@@ -35,8 +35,6 @@
     LC_TIME = "de_CH.UTF-8";
   };
 
-  networking.firewall.allowedTCPPorts = [22];
-
   nixpkgs.config.nvidia.acceptLicense = true;
 
   users.defaultUserShell = pkgs.zsh; # Moved to each host seperately due to darwin being dumb

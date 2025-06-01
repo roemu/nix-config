@@ -7,4 +7,5 @@
     };
     allowSFTP = true;
   };
+  networking.firewall.allowedTCPPorts = [22];
 }
