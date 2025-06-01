@@ -37,6 +37,7 @@
     allowedTCPPorts = [22 2222];
   };
 
+  nixpkgs.hostPlatform = "x86_64-linux";
   users.defaultUserShell = pkgs.zsh; # Moved to each host seperately due to darwin being dumb
   system.stateVersion = "24.05";
 }
