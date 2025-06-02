@@ -15,6 +15,8 @@
   home.packages = [
     pkgs.bruno
     pkgs.bruno-cli
+	pkgs.sops
+	pkgs.gnupg
   ];
 
   catppuccin.enable = true;
