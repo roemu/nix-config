@@ -24,6 +24,8 @@ in {
 			config.enable_tab_bar = false;
 			config.enable_wayland = true
 
+			config.warn_about_missing_glyphs = false;
+
 			config.keys = {
 				{
 					key = 'Q',

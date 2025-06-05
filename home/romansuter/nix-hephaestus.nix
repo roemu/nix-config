@@ -13,10 +13,10 @@
   ];
 
   home.packages = [
-    pkgs.bruno
-    pkgs.bruno-cli
 	pkgs.sops
 	pkgs.gnupg
+	pkgs.podman
+	pkgs.openshift
   ];
 
   catppuccin.enable = true;
@@ -31,6 +31,7 @@
       tms.enable = true;
     };
     desktop = {
+	  ghostty.enable = true;
       wezterm.enable = true;
     };
   };

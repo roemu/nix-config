@@ -7,6 +7,7 @@ vim.keymap.set('n', '*', '*zz')
 vim.keymap.set('n', 'n', '    nzz')
 vim.keymap.set('n', 'N', 'Nzz')
 vim.keymap.set('n', '<C-t>', '<Nop>')
+vim.keymap.set('i', '<M-u>','<C-v>u0308<Esc>a')
 vim.keymap.set({ 'n', 't', 'v' }, 's', '<Nop>')
 vim.keymap.set({ 'n', 't', 'v' }, 'S', '<Nop>')
 
