@@ -278,8 +278,8 @@ in {
       wlogout
       wtype
       ydotool
-	  wttrbar
-	  pamixer
+      wttrbar
+      pamixer
     ];
   };
 }

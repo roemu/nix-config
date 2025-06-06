@@ -1,7 +1,4 @@
-{
-  config,
-  ...
-}: {
+{config, ...}: {
   users.users.romansuter = {
     home = "/Users/romansuter";
   };

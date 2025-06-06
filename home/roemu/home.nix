@@ -1,5 +1,8 @@
-{ config, lib, ... }:
 {
+  config,
+  lib,
+  ...
+}: {
   home.username = lib.mkDefault "roemu";
   home.homeDirectory = lib.mkDefault "/home/${config.home.username}";
 

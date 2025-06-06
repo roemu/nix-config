@@ -1,4 +1,8 @@
-{inputs, pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ./home.nix
     ../common
@@ -7,7 +11,7 @@
   ];
 
   home.packages = [
-  	pkgs.sqlite
+    pkgs.sqlite
   ];
 
   features = {

@@ -15,14 +15,14 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-	agenix.url = "github:ryantm/agenix";
+    agenix.url = "github:ryantm/agenix";
   };
 
   outputs = {
     self,
     home-manager,
     nixpkgs,
-	agenix,
+    agenix,
     ...
   } @ inputs: let
     inherit (self) outputs;

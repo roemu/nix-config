@@ -5,7 +5,6 @@
   undmg,
   ...
 }:
-
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "arc-browser";
   version = "1.97.0-63507";
@@ -15,7 +14,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     hash = "sha256-8HdPyJJT1boiMpflIe6wX4oOTqw4oKm982gm1Ei8h4w=";
   };
 
-  nativeBuildInputs = [ undmg ];
+  nativeBuildInputs = [undmg];
 
   sourceRoot = "Arc.app";
 
@@ -33,8 +32,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   meta = {
     description = "Arc from The Browser Company";
     homepage = "https://arc.net/";
-    maintainers = with lib.maintainers; [ donteatoreo ];
-	platforms = lib.platforms.all;
-    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
+    maintainers = with lib.maintainers; [donteatoreo];
+    platforms = lib.platforms.all;
+    sourceProvenance = with lib.sourceTypes; [binaryNativeCode];
   };
 })

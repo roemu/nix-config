@@ -1,10 +1,10 @@
 {
-	imports = [
-		../common
-		../common/users
-		./configuration.nix
-		./programs.nix
-		./services
-		./secrets.nix
-	];
+  imports = [
+    ../common
+    ../common/users
+    ./configuration.nix
+    ./programs.nix
+    ./services
+    ./secrets.nix
+  ];
 }

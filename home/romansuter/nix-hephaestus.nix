@@ -13,10 +13,10 @@
   ];
 
   home.packages = [
-	pkgs.sops
-	pkgs.gnupg
-	pkgs.podman
-	pkgs.openshift
+    pkgs.sops
+    pkgs.gnupg
+    pkgs.podman
+    pkgs.openshift
   ];
 
   catppuccin.enable = true;
@@ -31,7 +31,7 @@
       tms.enable = true;
     };
     desktop = {
-	  ghostty.enable = true;
+      ghostty.enable = true;
       wezterm.enable = true;
     };
   };

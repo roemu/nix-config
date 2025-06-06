@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   system.activationScripts.preActivation = {
     enable = true;
     text = ''

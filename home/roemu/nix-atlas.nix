@@ -12,7 +12,7 @@
   ];
 
   home.packages = [
-	pkgs.go
+    pkgs.go
   ];
 
   catppuccin.enable = true;
