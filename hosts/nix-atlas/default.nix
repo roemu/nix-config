@@ -5,5 +5,6 @@
 		./configuration.nix
 		./programs.nix
 		./services.nix
+		./secrets.nix
 	];
 }
