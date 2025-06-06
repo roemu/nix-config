@@ -48,7 +48,7 @@
       };
       nix-artemis = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/nix-artemis];
+        modules = [./hosts/nix-artemis agenix.nixosModules.default];
       };
     };
     darwinConfigurations = {
