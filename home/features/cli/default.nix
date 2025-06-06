@@ -24,6 +24,9 @@
 		enable = true;
 		userName = "roemu";
 		userEmail = "20roman.suter02@gmail.com";
+		aliases = {
+			log = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+		};
 		extraConfig = {
 			init = {
 				defaultBranch = "master";
