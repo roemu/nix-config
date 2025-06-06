@@ -203,7 +203,7 @@ in {
         set -x NIX_LOG info
         set -x TERMINAL ghostty
 
-        if [ "$(tty)" = "/dev/tty1" ]; then
+        if [ -z "$SSH_CONNECTION" ] && [ "$(tty)" = "/dev/tty1" ]; then
         	exec hyprland
         fi
       '';
