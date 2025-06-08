@@ -8,6 +8,9 @@
       tailscale-key = {
         file = ../../secrets/tailscale-key.age;
       };
+      hetzner-tls = {
+        file = ../../secrets/hetzner-tls.age;
+      };
     };
   };
 }

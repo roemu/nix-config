@@ -9,4 +9,5 @@ let
 in {
   "secrets/password.age".publicKeys = users ++ systems;
   "secrets/tailscale-key.age".publicKeys = users ++ systems;
+  "secrets/hetzner-tls.age".publicKeys = users ++ systems;
 }
