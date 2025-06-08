@@ -41,6 +41,7 @@ in {
   services.headscale = {
     enable = true;
     port = 3009;
+    address = "0.0.0.0";
     settings = {
       server_url = "https://headscale.romansuter.ch";
       dns.base_domain = "roemu.loc";
@@ -70,6 +71,6 @@ in {
     '';
   };
 
-  # networking.firewall.allowedTCPPorts = [3009];
-  # networking.firewall.allowedUDPPorts = [3009];
+  networking.firewall.allowedTCPPorts = [3009];
+  networking.firewall.allowedUDPPorts = [3009];
 }
