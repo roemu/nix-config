@@ -1,5 +1,5 @@
 {
-  imports = [./adguard-home.nix];
+  imports = [./adguard-home.nix ./headscale.nix ./tailscale.nix];
   services.openssh = {
     enable = true;
     settings = {

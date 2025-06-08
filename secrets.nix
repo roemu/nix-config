@@ -8,4 +8,5 @@ let
   systems = [nix-atlas nix-artemis];
 in {
   "secrets/password.age".publicKeys = users ++ systems;
+  "secrets/tailscale-key.age".publicKeys = users ++ systems;
 }
