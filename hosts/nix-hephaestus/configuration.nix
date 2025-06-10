@@ -27,7 +27,7 @@
       finder.FXPreferredViewStyle = "clmv";
       dock = {
         persistent-apps = [
-          "${pkgs.wezterm}/Applications/WezTerm.app"
+          "/Applications/Ghostty.app"
           "${pkgs.arc-browser-updated}/Applications/Arc.app"
           "/Applications/Microsoft Teams.app"
           "/Applications/Microsoft Outlook.app"
