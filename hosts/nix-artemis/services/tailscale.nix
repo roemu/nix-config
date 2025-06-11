@@ -9,8 +9,7 @@
     authKeyFile = config.age.secrets.tailscale-key.path;
     useRoutingFeatures = "both";
     extraUpFlags = [
-      "--login-server=http://192.168.1.200:3009"
-    #   "--login-server=${config.services.headscale.settings.server_url}"
+      "--login-server=https://headscale.romansuter.ch"
       "--advertise-exit-node"
       "--accept-routes"
     ];

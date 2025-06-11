@@ -73,4 +73,21 @@ in {
 
   networking.firewall.allowedTCPPorts = [3009];
   networking.firewall.allowedUDPPorts = [3009];
+
+  services.traefik.dynamicConfigOptions.http = {
+    services.headscale.loadBalancer.servers = [
+      {
+        url = "http://localhost:3009/";
+      }
+    ];
+
+    routers.headscale = {
+      rule = "Host(`headscale.romansuter.ch`)";
+      tls = {
+        certResolver = "hetzner";
+      };
+      service = "headscale";
+      entrypoints = "websecure";
+    };
+  };
 }
