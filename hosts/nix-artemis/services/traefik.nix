@@ -13,7 +13,7 @@
             scheme = "https";
           };
         };
-        webSecure = {
+        websecure = {
           address = ":443";
         };
       };
@@ -41,20 +41,13 @@
         middlewares = {
           auth = {
             basicAuth = {
-              users = ["roemu:$apr1$1Rv4SpcT$GifWAAyW/yltr7ZuZ6C2.1"];
+              users = ["roemu:$apr1$suVaGN9e$nWfmWrUP4NIXkQc9hegHE0"];
             };
           };
           domain-redirect = {
             redirectRegex = {
               regex = "^https://romansuter\\.ch(.*)";
               replacement = "https://info.romansuter.ch$1";
-              permanent = true;
-            };
-          };
-          strip-www = {
-            redirectRegex = {
-              regex = "^https://www\\.(.+)";
-              replacement = "https://$1";
               permanent = true;
             };
           };
