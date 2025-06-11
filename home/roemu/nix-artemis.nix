@@ -19,6 +19,7 @@
       tmux.enable = true;
       starship.enable = true;
       tms.enable = true;
+      ssh.enable = true;
     };
   };
 }

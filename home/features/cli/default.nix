@@ -6,6 +6,7 @@
     ./starship.nix
     ./tmux.nix
     ./tms.nix
+    ./ssh.nix
   ];
   programs.bat = {
     enable = true;
