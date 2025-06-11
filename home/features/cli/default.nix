@@ -8,11 +8,9 @@
     ./tms.nix
     ./ssh.nix
   ];
+
   programs.bat = {
     enable = true;
-    config = {
-      pager = "less -R";
-    };
   };
 
   programs.man.enable = true;
