@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./zsh.nix
+    ./zsh
     ./neofetch.nix
     ./neovim.nix
     ./starship.nix
@@ -8,10 +8,6 @@
     ./tms.nix
     ./ssh.nix
   ];
-
-  programs.bat = {
-    enable = true;
-  };
 
   programs.man.enable = true;
 

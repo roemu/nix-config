@@ -15,13 +15,9 @@ in {
     };
   };
 
+  imports = [./zoxide.nix ./fd.nix ./ripgrep.nix ./podman.nix ./bat.nix];
+
   config = lib.mkIf cfg.enable {
-    programs.zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-    programs.fd.enable = true;
-    programs.ripgrep.enable = true;
     programs.zsh = {
       enable = true;
       enableCompletion = true;
@@ -31,10 +27,6 @@ in {
       shellAliases = lib.mkMerge [
         {
           ll = "ls -alh --color";
-          cat = "bat --theme=\"base16-256\"";
-          cd = "z";
-          find = "fd";
-          grep = "rg";
         }
         (lib.mkIf cfg.enableSudoAlias
           {
