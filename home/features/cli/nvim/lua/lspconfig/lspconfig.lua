@@ -20,12 +20,15 @@ vim.lsp.config.helm_ls = {
 	filetypes = { 'helm', 'helmfile' },
 }
 
+vim.lsp.config.angularls = {
+	filetypes = { 'htmlangular' },
+}
+
 vim.lsp.config('*', {
 	root_markers = { '.git' },
 	capabilities = vim.lsp.protocol.make_client_capabilities(),
 })
-vim.lsp.enable({ 'emmet_ls', 'bashls', 'gopls', 'openscad_lsp', 'yamlls', 'helm_ls', 'clangd', 'nil_ls', 'lua_ls',
-	'ts_ls', 'angularls' })
+vim.lsp.enable({ 'emmet_ls', 'bashls', 'gopls', 'openscad_lsp', 'yamlls', 'helm_ls', 'clangd', 'nil_ls', 'lua_ls', 'ts_ls', 'angularls' })
 
 return {
 	'mason-org/mason-lspconfig.nvim',
