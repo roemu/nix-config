@@ -30,7 +30,6 @@ in {
       pkgs.nodejs_24
       pkgs.maven
       pkgs.nodePackages.prettier
-      pkgs.xmlformat
       pkgs.websocat
       pkgs.grpcurl
     ];
