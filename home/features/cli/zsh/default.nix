@@ -15,7 +15,7 @@ in {
     };
   };
 
-  imports = [./zoxide.nix ./fd.nix ./ripgrep.nix ./podman.nix ./bat.nix];
+  imports = [./eza.nix ./zoxide.nix ./fd.nix ./ripgrep.nix ./podman.nix ./bat.nix];
 
   config = lib.mkIf cfg.enable {
     programs.zsh = {
@@ -24,15 +24,9 @@ in {
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
 
-      shellAliases = lib.mkMerge [
-        {
-          ll = "ls -alh --color";
-        }
-        (lib.mkIf cfg.enableSudoAlias
-          {
-            sudo = "/run/wrappers/bin/sudo";
-          })
-      ];
+      shellAliases = lib.mkIf cfg.enableSudoAlias {
+        sudo = "/run/wrappers/bin/sudo";
+      };
       history = {
         size = 10000;
         path = "${config.xdg.dataHome}/zsh/history";
