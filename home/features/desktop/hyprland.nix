@@ -199,11 +199,11 @@ in {
     };
     programs.zsh = {
       loginExtra = ''
-        set -x NIX_PATH nixpkgs=channel:nixos-unstable
-        set -x NIX_LOG info
-        set -x TERMINAL ghostty
+        set NIX_PATH nixpkgs=channel:nixos-unstable
+        set NIX_LOG info
 
         if [ -z "$SSH_CONNECTION" ] && [ "$(tty)" = "/dev/tty1" ]; then
+          set -x TERMINAL ghostty
         	exec hyprland
         fi
       '';
