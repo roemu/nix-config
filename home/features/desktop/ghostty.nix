@@ -17,6 +17,9 @@ in {
       background-opacity = 0.9
       background-blur = true
       background = #1e1e2e
+
+      selection-background = #1d252d
+
       macos-titlebar-style = hidden
       keybind = ctrl+shift+v=paste_from_clipboard
     '';
