@@ -1,5 +1,4 @@
 {...}: {
-  services.xserver.videoDrivers = ["nvidia"];
   services.xserver.xkb = {
     layout = "za";
     variant = "";

@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  config,
   ...
 }: {
   imports = [
@@ -41,14 +40,8 @@
   };
 
   hardware.graphics.enable = true;
-  hardware.nvidia = {
-    modesetting.enable = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    open = false;
-    nvidiaSettings = false;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-  };
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia.open = true;
 
   users.defaultUserShell = pkgs.zsh; # Moved to each host seperately due to darwin being dumb
 
