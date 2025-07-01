@@ -17,6 +17,7 @@
     pkgs.gnupg
     pkgs.podman
     pkgs.openshift
+    pkgs.gimp
   ];
 
   catppuccin.enable = true;
