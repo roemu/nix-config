@@ -119,8 +119,6 @@
         alt-shift-l = ["join-with right" "mode main"];
       };
       workspace-to-monitor-force-assignment = {
-        "T" = "1";
-        "B" = "2";
         "W" = "main";
       };
     };
