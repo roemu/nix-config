@@ -28,7 +28,7 @@
       dock = {
         persistent-apps = [
           "/Applications/Ghostty.app"
-          "${pkgs.arc-browser-updated}/Applications/Arc.app"
+          "${pkgs.arc-browser}/Applications/Arc.app"
           "/Applications/Microsoft Teams.app"
           "/Applications/Microsoft Outlook.app"
         ];
@@ -44,6 +44,6 @@
   environment.systemPackages = with pkgs; [
     git
     neovim
-    arc-browser-updated
+    arc-browser
   ];
 }

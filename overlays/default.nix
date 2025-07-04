@@ -1,11 +1,17 @@
-{inputs, ...}: {
-  # This one brings our custom packages from the 'pkgs' directory
+{
+  inputs,
+  ...
+}: {
   additions = final: _prev: import ../pkgs {pkgs = final;};
 
-  # This one contains whatever you want to overlay
-  # You can change versions, add patches, set compilation flags, anything really.
-  # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
+    arc-browser = prev.arc-browser.overrideAttrs (old: rec {
+      version = "1.101.1-65021";
+      src = prev.fetchurl {
+        url = "https://releases.arc.net/release/Arc-${version}.dmg";
+        hash = "sha256-FBgfwM60ca1NQmUtaXKiQ6Rz0XXtertXZTJH0N8WvBY=";
+      };
+    });
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
