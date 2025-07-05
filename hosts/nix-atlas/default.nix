@@ -2,9 +2,9 @@
   imports = [
     ../common
     ../common/users
+    ./services
     ./configuration.nix
     ./programs.nix
-    ./services.nix
     ./secrets.nix
   ];
 }

@@ -1,4 +1,7 @@
-{...}: {
+{
+  imports = [
+    ./tailscale.nix
+  ];
   services.xserver.xkb = {
     layout = "za";
     variant = "";
