@@ -73,7 +73,6 @@ in {
   };
 
   networking.firewall.allowedTCPPorts = [3009];
-  networking.firewall.allowedUDPPorts = [3009];
 
   services.traefik.dynamicConfigOptions.http = {
     services.headscale.loadBalancer.servers = [
