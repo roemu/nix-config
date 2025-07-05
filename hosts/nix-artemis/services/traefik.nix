@@ -39,6 +39,13 @@
     dynamicConfigOptions = {
       http = {
         middlewares = {
+          tailscale-auth = {
+            ipWhiteList = {
+              sourceRange = [
+                "100.64.0.0/10"
+              ];
+            };
+          };
           auth = {
             basicAuth = {
               users = ["roemu:$apr1$suVaGN9e$nWfmWrUP4NIXkQc9hegHE0"];
@@ -57,7 +64,7 @@
           api = {
             rule = "Host(`traefik.romansuter.ch`)";
             service = "api@internal";
-            middlewares = ["auth"];
+            middlewares = ["auth" "tailscale-auth"];
             entrypoints = ["websecure"];
             tls = {
               certResolver = "hetzner";

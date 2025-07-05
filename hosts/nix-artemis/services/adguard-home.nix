@@ -4,7 +4,7 @@
     openFirewall = true;
     settings = {
       http = {
-        address = "0.0.0.0:3000";
+        address = "100.64.0.1:3000";
       };
     };
   };
@@ -23,6 +23,7 @@
       tls = {
         certResolver = "hetzner";
       };
+      middlewares = ["auth" "tailscale-auth"];
       service = "adguardhome";
       entrypoints = "websecure";
     };
