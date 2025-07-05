@@ -44,7 +44,7 @@ in {
     address = "0.0.0.0";
     settings = {
       server_url = "https://headscale.romansuter.ch";
-      dns.base_domain = "romansuter.ch";
+      dns.base_domain = "roemu.loc";
       dns.override_local_dns = false;
       policy.path = pkgs.writeText "acl-policy.hujson" (builtins.toJSON aclConfig);
     };
