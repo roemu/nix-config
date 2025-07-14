@@ -24,7 +24,7 @@ return {
 			["markdown.mdx"] = { "prettier" },
 			["graphql"] = { "prettier" },
 			["handlebars"] = { "prettier" },
-			["angular"] = { "prettier" },
+			["htmlangular"] = { "prettier" },
 			["nix"] = { "alejandra" },
 		},
 	},
