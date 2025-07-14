@@ -79,5 +79,5 @@
     EnvironmentFile = ["${config.age.secrets.hetzner-tls.path}"];
   };
 
-  networking.firewall.allowedTCPPorts = [80 443];
+  networking.firewall.allowedTCPPorts = [443];
 }
