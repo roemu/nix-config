@@ -13,4 +13,5 @@
   };
 
   programs.home-manager.enable = true;
+  programs.git.signing.key = (import ../../secrets.nix).roemu;
 }
