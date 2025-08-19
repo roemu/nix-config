@@ -20,8 +20,8 @@ vim.lsp.config.helm_ls = {
 	filetypes = { 'helm', 'helmfile' },
 }
 
-vim.lsp.config.angularls = {
-	filetypes = { 'htmlangular' },
+vim.lsp.config.ts_ls = {
+	filetypes = { 'htmlangular', 'ts', 'typescript' },
 }
 
 vim.lsp.config('*', {
