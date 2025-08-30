@@ -23,12 +23,16 @@ vim.lsp.config.helm_ls = {
 vim.lsp.config.ts_ls = {
 	filetypes = { 'htmlangular', 'ts', 'typescript' },
 }
+vim.lsp.config.clangd = {
+	filetypes = { 'arduino', 'c', 'cpp' },
+}
 
 vim.lsp.config('*', {
 	root_markers = { '.git' },
 	capabilities = vim.lsp.protocol.make_client_capabilities(),
 })
-vim.lsp.enable({ 'emmet_ls', 'bashls', 'gopls', 'openscad_lsp', 'yamlls', 'helm_ls', 'clangd', 'nil_ls', 'lua_ls', 'ts_ls', 'angularls' })
+vim.lsp.enable({ 'emmet_ls', 'bashls', 'gopls', 'openscad_lsp', 'yamlls', 'helm_ls', 'clangd', 'nil_ls', 'lua_ls',
+	'ts_ls', 'angularls' })
 
 return {
 	'mason-org/mason-lspconfig.nvim',

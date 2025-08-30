@@ -27,6 +27,7 @@
     signing.signByDefault = true;
     extraConfig = {
       gpg.ssh.allowedSignersFile = "~/.config/git/allowed_signers";
+      pull.rebase = true;
       init = {
         defaultBranch = "master";
       };

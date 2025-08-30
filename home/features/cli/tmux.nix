@@ -41,6 +41,7 @@ in {
 
         bind -n 'C-t' neww "tms"
         bind -n 'C-h' switch-client -l
+        bind C-a last-window
 
         bind 'n' split-window -v -c "#{pane_current_path}"
         bind 'v' split-window -h -c "#{pane_current_path}"
