@@ -6,10 +6,10 @@
 
   modifications = final: prev: {
     arc-browser = prev.arc-browser.overrideAttrs (old: rec {
-      version = "1.110.0-67696";
+      version = "1.112.0-68314";
       src = prev.fetchurl {
         url = "https://releases.arc.net/release/Arc-${version}.dmg";
-        hash = "sha256-Ce80v/eIcoGX3KTPV/0bKHnv3PqsvUfLE1o+kpZ/B4w=";
+        hash = "sha256-tB+JrUtWnz8Qj1UIkPuuPTB2kFWlXK9FqQzWp5HQ4ZI=";
       };
       meta.knownVulerabilities = [];
     });
