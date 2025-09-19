@@ -3,19 +3,15 @@
   stdenvNoCC,
   fetchurl,
   undmg,
-  writeShellApplication,
-  curl,
-  common-updater-scripts,
-  xmlstarlet,
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "arc-browser";
-  version = "1.112.0-68314";
+  version = "1.113.0-68787";
 
   src = fetchurl {
     url = "https://releases.arc.net/release/Arc-${finalAttrs.version}.dmg";
-    hash = "sha256-tB+JrUtWnz8Qj1UIkPuuPTB2kFWlXK9FqQzWp5HQ4ZI=";
+    hash = "sha256-ELgZJ5cefaAEy+pnq4y+Qzzms9bM2QjjV38JrIjzll0=";
   };
 
   nativeBuildInputs = [ undmg ];
