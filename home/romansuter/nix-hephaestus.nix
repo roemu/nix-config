@@ -18,7 +18,6 @@
     pkgs.podman
     pkgs.openshift
     pkgs.kubernetes-helm
-    pkgs.gimp
   ];
 
   catppuccin.enable = true;

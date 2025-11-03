@@ -10,7 +10,7 @@ in {
   options.features.desktop.ghostty.enable = lib.mkEnableOption "Enable extended ghostty configuration";
 
   config = lib.mkIf cfg.enable {
-    home.packages = lib.mkIf (pkgs.hostPlatform.system != "aarch64-darwin") [
+    home.packages = lib.mkIf (pkgs.stdenv.hostPlatform.system != "aarch64-darwin") [
       inputs.ghostty.packages."${pkgs.system}".default
     ];
     home.file.".config/ghostty/config".text = ''
