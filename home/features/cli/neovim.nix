@@ -43,6 +43,11 @@ in {
       JAVA_HOME = "${pkgs.jdk21_headless}";
     };
 
+    # NOTE: for some reason viAlias option does not work.
+    programs.zsh.shellAliases = {
+      vi = "nvim";
+    };
+
     programs.neovim = {
       enable = true;
       defaultEditor = true;
