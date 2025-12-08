@@ -18,6 +18,7 @@
     pkgs.podman
     pkgs.openshift
     pkgs.kubernetes-helm
+    pkgs.go
   ];
 
   catppuccin.enable = true;
