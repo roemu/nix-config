@@ -32,6 +32,7 @@ in {
       pkgs.nodePackages.prettier
       pkgs.websocat
       pkgs.grpcurl
+      pkgs.rust-analyzer
     ];
 
     programs.java = {

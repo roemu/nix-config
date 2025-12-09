@@ -19,6 +19,8 @@
     pkgs.openshift
     pkgs.kubernetes-helm
     pkgs.go
+    pkgs.rustc
+    pkgs.rustfmt
   ];
 
   catppuccin.enable = true;
