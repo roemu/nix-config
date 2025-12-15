@@ -32,7 +32,7 @@ vim.lsp.config('*', {
 	capabilities = vim.lsp.protocol.make_client_capabilities(),
 })
 vim.lsp.enable({ 'emmet_ls', 'bashls', 'gopls', 'openscad_lsp', 'yamlls', 'helm_ls', 'clangd', 'nil_ls', 'lua_ls',
-	'ts_ls', 'angularls', 'rust_analyzer' })
+	'ts_ls', 'angularls', 'rust_analyzer', 'vacuum' })
 
 return {
 	'mason-org/mason-lspconfig.nvim',

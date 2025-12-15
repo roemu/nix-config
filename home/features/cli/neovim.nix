@@ -33,6 +33,7 @@ in {
       pkgs.websocat
       pkgs.grpcurl
       pkgs.rust-analyzer
+      pkgs.vacuum-go
     ];
 
     programs.java = {
