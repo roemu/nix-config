@@ -13,7 +13,6 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
   networking.hostName = "nix-hephaestus";
-
   system = {
     configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
     stateVersion = 5;
@@ -36,6 +35,7 @@
         autohide = true;
       };
       screencapture.location = "/tmp";
+      screencapture.target = "clipboard";
       NSGlobalDomain._HIHideMenuBar = true;
       NSGlobalDomain.AppleShowAllFiles = true;
     };
