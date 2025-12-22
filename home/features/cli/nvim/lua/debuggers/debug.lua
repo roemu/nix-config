@@ -27,13 +27,12 @@ return {
 			}
 		}
 
-		---@diagnostic disable-next-line: unused-function, lowercase-global
-		function show_dap_centered_scopes()
+		local function show_dap_centered_scopes()
 			local widgets = require("dap.ui.widgets")
 			widgets.centered_float(widgets.scopes)
 		end
 
-		vim.keymap.set('n', '<leader>dv', ':lua show_dap_centered_scopes()<CR>', { desc = "Debug: show variables" })
+		vim.keymap.set('n', '<leader>dv', show_dap_centered_scopes, { desc = "Debug: show variables" })
 		vim.keymap.set('n', '<leader>ds', dap.continue, { desc = 'Debug: Start' })
 		vim.keymap.set('n', '<leader>di', dap.step_into, { desc = 'Debug: Step Into' })
 		vim.keymap.set('n', '<leader>do', dap.step_over, { desc = 'Debug: Step Over' })
