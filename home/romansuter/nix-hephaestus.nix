@@ -37,7 +37,6 @@
     };
     desktop = {
       ghostty.enable = true;
-      wezterm.enable = true;
     };
   };
 

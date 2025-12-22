@@ -7,6 +7,5 @@
     ./waypaper.nix
     ./wofi.nix
     ./hyprpaper.nix
-    ./wezterm.nix
   ];
 }
