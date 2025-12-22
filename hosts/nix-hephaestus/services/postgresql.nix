@@ -13,8 +13,8 @@
   # ALTER USER postgres WITH PASSWORD 'postgres';
   services.postgresql = {
     enable = true;
-    package = pkgs.postgresql_13;
-    dataDir = "/var/lib/postgresql/13";
+    package = pkgs.postgresql_18;
+    dataDir = "/var/lib/postgresql/18";
     authentication = "local all all trust";
     initdbArgs = [
       "-U postgres"
