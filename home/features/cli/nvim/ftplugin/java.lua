@@ -14,7 +14,7 @@ local project_name = vim.fn.fnamemodify(root_dir, ":p:h:t")
 local workspace_dir = home .. "/.cache/jdtls/workspace" .. project_name
 local lsp = require("vim.lsp")
 
-function mk_config()
+local function mk_config()
 	local capabilities = lsp.protocol.make_client_capabilities()
 	capabilities.workspace.configuration = true
 	capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -29,7 +29,7 @@ function mk_config()
 	}
 end
 
-function archConfigName()
+local function archConfigName()
 	local jit = require("jit")
 
 	if jit.os == 'OSX' and (jit.arch == 'arm64' or jit.arch == 'arm' ) then
