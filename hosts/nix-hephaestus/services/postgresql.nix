@@ -10,7 +10,9 @@
     '';
   };
 
+  # psql -U postgres
   # ALTER USER postgres WITH PASSWORD 'postgres';
+  # CREATE DATABASE apim;
   services.postgresql = {
     enable = true;
     package = pkgs.postgresql_18;
