@@ -1,3 +1,4 @@
+---@type LazySpec
 return {
   'mistweaverco/kulala.nvim',
   keys = {
@@ -18,6 +19,16 @@ return {
         winbar = true,
         default_view = "headers_body",
         default_winbar_panes = { "body", "headers", "headers_body" },
+      },
+      contenttypes = {
+        ["application/json"] = {
+          ft = "json",
+          formatter = vim.fn.executable("jq") == 1 and { "jq", "." },
+          pathresolver = function(...)
+            return require("kulala.parser.jsonpath").parse(...)
+          end,
+        },
+        ["application/problem+json"] = "application/json",
       },
     })
     vim.filetype.add({
