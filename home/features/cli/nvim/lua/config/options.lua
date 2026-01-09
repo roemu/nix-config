@@ -19,7 +19,6 @@ vim.wo.signcolumn = 'yes'
 
 vim.filetype.add({
 	extension = {
-		['http'] = 'http',
 		['bru'] = 'bru',
 	}
 })
