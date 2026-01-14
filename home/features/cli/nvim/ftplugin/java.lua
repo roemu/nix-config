@@ -64,9 +64,7 @@ config.settings = {
 		contentProvider = { preferred = "fernflower" },
 		completion = {
 			favoriteStaticMembers = {
-				"org.hamcrest.MatcherAssert.assertThat",
-				"org.hamcrest.Matchers.*",
-				"org.hamcrest.CoreMatchers.*",
+				"org.mockito.ArgumentMatchers.*",
 				"org.junit.jupiter.api.Assertions.*",
 				"java.util.Objects.requireNonNull",
 				"java.util.Objects.requireNonNullElse",
