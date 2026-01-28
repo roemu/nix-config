@@ -42,8 +42,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    git
-    neovim
     arc-browser
   ];
 }

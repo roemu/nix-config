@@ -22,10 +22,14 @@
       alias = {
         log = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
       };
-      user.name = "roemu";
-      user.email = "20roman.suter02@gmail.com";
+      user = lib.mkDefault {
+        name = "roemu";
+        email = "20roman.suter02@gmail.com";
+      };
       gpg.ssh.allowedSignersFile = "~/.config/git/allowed_signers";
       pull.rebase = true;
+      push.autoSetupRemote = true;
+      rebase.autosquash = true;
       init = {
         defaultBranch = "master";
       };

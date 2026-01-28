@@ -40,6 +40,11 @@
     };
   };
 
+  programs.git.settings = {
+      user.name = "U239087";
+      user.email = "roman.suter2@sbb.ch";
+  };
+
   programs.starship.settings.right_format = lib.mkForce ""; # Due to https://github.com/starship/starship/issues/6524
 
   programs.zsh.sessionVariables = {
