@@ -38,11 +38,11 @@ in {
 
     programs.java = {
       enable = true;
-      package = pkgs.jdk21_headless;
+      package = pkgs.jdk25_headless;
     };
 
     programs.zsh.sessionVariables = {
-      JAVA_HOME = "${pkgs.jdk21_headless}";
+      JAVA_HOME = "${pkgs.jdk25_headless}";
     };
 
     # NOTE: for some reason viAlias option does not work.
