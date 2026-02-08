@@ -27,7 +27,7 @@
       dock = {
         persistent-apps = [
           "/Applications/Ghostty.app"
-          "${pkgs.arc-browser}/Applications/Arc.app"
+          "${pkgs.zen-browser}/Applications/Arc.app"
           "/Applications/Microsoft Teams.app"
           "/Applications/Microsoft Outlook.app"
         ];

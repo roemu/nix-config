@@ -2,7 +2,9 @@
   inputs,
   ...
 }: {
-  additions = final: _prev: import ../pkgs {pkgs = final;};
+  additions = final: prev: 
+  (import ../pkgs {pkgs = final;})
+  // {zen-browser = inputs.zen-browser.packages."${final.stdenv.hostPlatform.system}".twilight;};
 
   modifications = final: prev: {
     # arc-browser = prev.arc-browser.overrideAttrs (old: rec {
