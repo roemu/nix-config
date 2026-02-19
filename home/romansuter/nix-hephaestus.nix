@@ -37,7 +37,7 @@
     };
     desktop = {
       ghostty.enable = true;
-      zen-browser.enable = true;
+      zen-browser.enable = false;
     };
   };
 
