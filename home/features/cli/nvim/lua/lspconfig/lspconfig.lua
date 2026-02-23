@@ -21,7 +21,7 @@ vim.lsp.config.helm_ls = {
 }
 
 vim.lsp.config.ts_ls = {
-	filetypes = { 'htmlangular', 'ts', 'typescript' },
+	filetypes = { 'ts', 'typescript' },
 }
 vim.lsp.config.clangd = {
 	filetypes = { 'arduino', 'c', 'cpp' },
