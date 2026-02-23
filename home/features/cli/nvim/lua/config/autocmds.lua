@@ -16,3 +16,10 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 vim.cmd(':au BufRead,BufEnter *.component.html set filetype=htmlangular')
+
+vim.api.nvim_create_autocmd({ 'BufWritePost', 'LspAttach' }, {
+	pattern = { "*.java" },
+	callback = function()
+		local _, _ = pcall(vim.lsp.codelens.refresh)
+	end,
+})
