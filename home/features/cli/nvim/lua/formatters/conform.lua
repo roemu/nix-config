@@ -18,7 +18,6 @@ return {
 			["html"] = { "prettier" },
 			["json"] = { "prettier" },
 			["jsonc"] = { "prettier" },
-			["xml"] = { "xmlformat" },
 			["yaml"] = { "prettier" },
 			["markdown"] = { "prettier" },
 			["markdown.mdx"] = { "prettier" },
