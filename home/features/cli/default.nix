@@ -1,7 +1,7 @@
 {pkgs, lib, ...}: {
   imports = [
     ./zsh
-    ./neofetch.nix
+    ./fastfetch.nix
     ./neovim.nix
     ./starship.nix
     ./tmux.nix

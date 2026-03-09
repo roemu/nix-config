@@ -20,7 +20,7 @@
     cli = {
       zsh.enable = true;
       neovim.enable = true;
-      neofetch.enable = true;
+      fastfetch.enable = true;
       tmux.enable = true;
       starship.enable = true;
       tms.enable = true;

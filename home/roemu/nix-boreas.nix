@@ -18,7 +18,7 @@
     cli = {
       zsh.enable = true;
       neovim.enable = true;
-      neofetch.enable = true;
+      fastfetch.enable = true;
       starship.enable = true;
     };
   };

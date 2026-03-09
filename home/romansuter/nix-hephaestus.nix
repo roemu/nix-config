@@ -29,7 +29,7 @@
       zsh.enable = true;
       zsh.enableSudoAlias = false;
       neovim.enable = true;
-      neofetch.enable = true;
+      fastfetch.enable = true;
       tmux.enable = true;
       starship.enable = true;
       tms.enable = true;
