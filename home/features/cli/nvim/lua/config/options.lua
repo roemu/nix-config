@@ -17,11 +17,6 @@ vim.opt.tabstop = 4
 vim.wo.number = true
 vim.wo.signcolumn = 'yes'
 
-vim.filetype.add({
-	extension = {
-		['bru'] = 'bru',
-	}
-})
 
 vim.diagnostic.config({
 	-- virtual_lines = { current_line = true }
