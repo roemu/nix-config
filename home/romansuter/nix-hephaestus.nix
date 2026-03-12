@@ -21,6 +21,7 @@
     pkgs.go
     pkgs.rustc
     pkgs.rustfmt
+    pkgs.opencode
   ];
 
   catppuccin.enable = true;
