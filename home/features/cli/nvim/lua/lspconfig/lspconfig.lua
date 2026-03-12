@@ -1,5 +1,3 @@
-vim.opt.completeopt = { "menuone", "noselect", "popup" }
-
 vim.lsp.config.lua_ls = {
 	settings = {
 		Lua = {
