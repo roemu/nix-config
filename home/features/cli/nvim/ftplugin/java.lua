@@ -1,10 +1,6 @@
 local jdtls = require('jdtls');
 local jdtls_dap = require('jdtls.dap');
 
-vim.opt.tabstop = 4;
-vim.opt.shiftwidth = 4;
-vim.opt.expandtab = true;
-
 local jdtls_install = vim.fn.expand("$MASON/packages/jdtls")
 local lombok_path = jdtls_install .. "/lombok.jar"
 
