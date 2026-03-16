@@ -78,9 +78,9 @@ local config = {
 	-- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
 	settings = {
 		java = {
-			autobuild = {
-				enabled = false
-			},
+			-- autobuild = {
+			-- 	enabled = false
+			-- },
 			eclipse = {
 				downloadSources = true,
 			},

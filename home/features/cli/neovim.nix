@@ -34,6 +34,7 @@ in {
       pkgs.grpcurl
       pkgs.rust-analyzer
       pkgs.vacuum-go
+      pkgs.vscode-langservers-extracted
     ];
 
     programs.java = {
