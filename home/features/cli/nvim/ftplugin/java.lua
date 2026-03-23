@@ -129,6 +129,10 @@ local config = {
 					"org.mockito.Mockito.*",
 				},
 				filteredTypes = {
+          "org.apache.el.stream.Optional",
+          "com.google.common.base.Optional",
+          "org.hibernate.mapping.List",
+          "com.microsoft.graph.models.List",
 					"com.sun.*",
 					"io.micrometer.shaded.*",
 					"java.awt.*",
