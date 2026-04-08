@@ -29,7 +29,7 @@ in {
       pkgs.libclang
       pkgs.nodejs_24
       pkgs.maven
-      pkgs.nodePackages.prettier
+      pkgs.prettier
       pkgs.websocat
       pkgs.grpcurl
       pkgs.rust-analyzer
