@@ -146,10 +146,10 @@ local config = {
 				preferred = "fernflower",
 			},
 			referencesCodeLens = {
-				enabled = true,
+				enabled = false,
 			},
 			implementationsCodeLens = {
-				enabled = true
+				enabled = false
 			}
 		}
 	},
