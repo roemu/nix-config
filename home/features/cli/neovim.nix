@@ -35,6 +35,7 @@ in {
       pkgs.rust-analyzer
       pkgs.vacuum-go
       pkgs.vscode-langservers-extracted
+      pkgs.tree-sitter
     ];
 
     programs.java = {
