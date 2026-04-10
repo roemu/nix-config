@@ -1,6 +1,7 @@
 {pkgs, lib, ...}: {
   imports = [
     ./zsh
+    ./opencode
     ./fastfetch.nix
     ./neovim.nix
     ./starship.nix

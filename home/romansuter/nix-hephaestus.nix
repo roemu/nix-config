@@ -21,7 +21,6 @@
     pkgs.go
     pkgs.rustc
     pkgs.rustfmt
-    pkgs.opencode
   ];
 
   catppuccin.enable = true;
@@ -35,6 +34,7 @@
       starship.enable = true;
       tms.enable = true;
       ssh.enable = true;
+      opencode.enable = true;
     };
     desktop = {
       ghostty.enable = true;
