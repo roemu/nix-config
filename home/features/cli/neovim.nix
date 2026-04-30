@@ -56,6 +56,8 @@ in {
       enable = true;
       defaultEditor = true;
       viAlias = true;
+      withRuby = false;
+      withPython3 = false;
     };
 
     home.file = {
