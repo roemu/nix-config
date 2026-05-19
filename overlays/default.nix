@@ -28,6 +28,11 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
+    # prettier = prev.prettier.override {
+    #   plugins = [
+    #     final.prettier-plugin-java
+    #   ];
+    # }
   };
 
   stable-packages = final: _prev: {
