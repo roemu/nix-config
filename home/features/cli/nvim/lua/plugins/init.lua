@@ -22,6 +22,7 @@ return {
         init = function()
             local ft = require "Comment.ft"
             ft({ 'htmlangular' }, ft.get('html'))
+            ft({ 'sql' }, '-- %s')
         end
     },
     {
