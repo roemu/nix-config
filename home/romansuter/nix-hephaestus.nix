@@ -21,6 +21,7 @@
     pkgs.go
     pkgs.rustc
     pkgs.rustfmt
+    pkgs.raycast
   ];
 
   catppuccin.enable = true;
