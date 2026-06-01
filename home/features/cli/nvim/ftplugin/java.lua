@@ -4,6 +4,11 @@ local jdtls_dap = require('jdtls.dap');
 local jdtls_install = vim.fn.expand("$MASON/packages/jdtls")
 local lombok_path = jdtls_install .. "/lombok.jar"
 
+vim.opt.tabstop = 8
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 local function jdtls_on_attach(_, _)
 	vim.keymap.set('n', '<leader>tc', ':lua require("jdtls").test_class()<CR>', { desc = '[T]est: [C]lass' })
 	vim.keymap.set('n', '<leader>tm', ':lua require("jdtls").test_nearest_method()<CR>',
