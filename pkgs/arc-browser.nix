@@ -7,11 +7,11 @@
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "arc-browser";
-  version = "1.145.0-79930";
+  version = "1.146.0-80402";
 
   src = fetchurl {
     url = "https://releases.arc.net/release/Arc-${finalAttrs.version}.dmg";
-    hash = "sha256-xEjoywN1LzMhlqie2yyXegqeM1G1z0aDimQXyz92mfg=";
+    hash = "sha256-ERpeIN8iRWt554lhD1k50Ye66xLjDV5wePoA6iZO4aQ=";
   };
 
   nativeBuildInputs = [ undmg ];
