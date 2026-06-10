@@ -24,6 +24,7 @@
     pkgs.raycast
   ];
 
+  catppuccin.autoEnable = true;
   catppuccin.enable = true;
   features = {
     cli = {

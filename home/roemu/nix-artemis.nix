@@ -10,6 +10,7 @@
   home.packages = [
   ];
 
+  catppuccin.autoEnable = true;
   catppuccin.enable = true;
   features = {
     cli = {
