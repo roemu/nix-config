@@ -10,6 +10,7 @@
     ../features/cli
     ../features/desktop
     inputs.catppuccin.homeModules.catppuccin
+    inputs.zen-browser.homeModules.twilight
   ];
 
   home.packages = [
@@ -40,7 +41,7 @@
     };
     desktop = {
       ghostty.enable = true;
-      zen-browser.enable = false;
+      zen-browser.enable = true;
     };
   };
 
