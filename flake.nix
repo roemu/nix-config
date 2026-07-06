@@ -17,6 +17,8 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     agenix.url = "github:ryantm/agenix";
+    codebase-memory-mcp.url = "github:DeusData/codebase-memory-mcp";
+    codebase-memory-mcp.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {

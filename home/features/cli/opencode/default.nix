@@ -36,8 +36,16 @@ in {
             };
           };
         };
+        mcp = {
+          codebase-memory-mcp = {
+            type = "local";
+            enabled = true;
+            command = ["codebase-memory-mcp"];
+          };
+        };
       };
     };
+    home.file.".config/opencode/skills/codebase-memory-mcp/SKILL.md".source = ./skills/codebase-memory-mcp.md;
     home.file.".config/opencode/skills/caveman/SKILL.md".source = ./skills/caveman.md;
     home.file.".config/opencode/skills/caveman-review/SKILL.md".source = ./skills/caveman-review.md;
   };

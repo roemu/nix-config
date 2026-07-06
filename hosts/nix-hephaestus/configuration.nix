@@ -42,6 +42,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    inputs.codebase-memory-mcp.packages.${pkgs.stdenv.hostPlatform.system}.default
     arc-browser
   ];
 }
