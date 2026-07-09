@@ -7,6 +7,16 @@
   // {zen-browser = inputs.zen-browser.packages."${final.stdenv.hostPlatform.system}".twilight;};
 
   modifications = final: prev: {
+    # podman = prev.podman.overrideAttrs (old: rec {
+    #   version = "5.8.3";
+    #   src = prev.fetchFromGitHub {
+    #     owner = "containers";
+    #     repo = "podman";
+    #     tag = "v${version}";
+    #     hash = "sha256-MS5eaGTcCAtEvoQUhGlX8UfoOqNOv0VAoeFxfAvB3Zs=";
+    #   };
+    #   meta.allowedPlatforms = prev.meta.allowedPlatforms ++ ["aarch64-darwin"];
+    # });
     # arc-browser = prev.arc-browser.overrideAttrs (old: rec {
     #   version = "1.112.0-68314";
     #   src = prev.fetchurl {
