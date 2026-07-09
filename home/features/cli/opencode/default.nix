@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.features.cli.opencode;
@@ -10,6 +11,9 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
+    home.packages = [
+      pkgs.codebase-memory-mcp
+    ];
     programs.opencode = {
       enable = true;
       settings = {
