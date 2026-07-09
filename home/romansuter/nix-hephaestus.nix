@@ -23,7 +23,6 @@
     pkgs.rustc
     pkgs.rustfmt
     pkgs.raycast
-    pkgs.lmstudio
   ];
 
   catppuccin.autoEnable = true;
