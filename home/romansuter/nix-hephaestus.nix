@@ -17,6 +17,7 @@
     pkgs.sops
     pkgs.gnupg
     pkgs.podman
+    pkgs.podman-compose
     pkgs.openshift
     pkgs.kubernetes-helm
     pkgs.go
