@@ -19,6 +19,14 @@ in {
         hostname = "100.64.0.2";
         user = "romansuter";
       };
+      "personal" = {
+        hostname = "github.com";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "work" = {
+        hostname = "github.com";
+        identityFile = "~/.ssh/work_id_ed25519";
+      };
       "*" = {
         forwardAgent = false;
         addKeysToAgent = "no";
