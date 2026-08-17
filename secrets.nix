@@ -1,4 +1,5 @@
 let
+  # TODO: fix these public key namings. import roemu key on nix-hephaestus and change romansuter to the work public key. Re-encrypt the files
   roemu = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOIcrTOdoPmASCfBPjt+qm/iGQ6ASExs1YtOAtKIMJty 20roman.suter02@gmail.com";
   romansuter = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICKnGNGP2GQeA1FCp7u3OccD8u6hQXFqJZW9rd0GJcZe roman.suter2@sbb.ch";
   users = [roemu romansuter];

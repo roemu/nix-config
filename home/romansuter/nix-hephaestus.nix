@@ -46,10 +46,25 @@
     };
   };
 
-  programs.git.settings = {
-      user.name = "U239087";
-      user.email = "roman.suter2@sbb.ch";
-  };
+  programs.git.settings.user = {};
+  programs.git.includes = [
+    {
+      condition = "hasconfig:remote.*.url:git@work:*/**";
+      contents = {
+        user.name = "U239087";
+        user.email = "roman.suter2@sbb.ch";
+        user.signingkey = "~/.ssh/work_id_ed25519.pub";
+      };
+    }
+    {
+      condition = "hasconfig:remote.*.url:git@personal:*/**";
+      contents = {
+        user.name = "roemu";
+        user.email = "20roman.suter02@gmail.com";
+        user.signingkey = "~/.ssh/id_ed25519.pub";
+      };
+    }
+  ];
 
   programs.starship.settings.right_format = lib.mkForce ""; # Due to https://github.com/starship/starship/issues/6524
 
