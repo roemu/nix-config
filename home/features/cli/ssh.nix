@@ -38,6 +38,7 @@ in {
         controlMaster = "no";
         controlPath = "~/.ssh/master-%r@%n:%p";
         controlPersist = "no";
+        identityFile = "~/.ssh/id_ed25519";
       };
     };
   };
