@@ -31,6 +31,11 @@ in {
         set -g status-bg default
         set-option -g status-style bg=default
 
+        # https://github.com/catppuccin/tmux/issues/600
+        set -gF message-style "fg=#{@thm_teal},bg=default,fill=#{@thm_bg}"
+        set -gF message-command-style "fg=#{@thm_teal},bg=default,fill=#{@thm_bg}"
+        # ---
+
         set -g default-command $SHELL
         set-option -sa terminal-overrides ",xterm-256color:Tc"
 
