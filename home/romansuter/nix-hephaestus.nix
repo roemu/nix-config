@@ -49,11 +49,19 @@
   programs.git.settings.user = {};
   programs.git.includes = [
     {
+      condition = "hasconfig:remote.*.url:ssh://git@codessh.sbb.ch:*/**";
+      contents = {
+        user.name = "U239087";
+        user.email = "roman.suter2@sbb.ch";
+        user.signingkey = "~/.ssh/work_id_ed25519";
+      };
+    }
+    {
       condition = "hasconfig:remote.*.url:git@work:*/**";
       contents = {
         user.name = "U239087";
         user.email = "roman.suter2@sbb.ch";
-        user.signingkey = "~/.ssh/work_id_ed25519.pub";
+        user.signingkey = "~/.ssh/work_id_ed25519";
       };
     }
     {
@@ -61,7 +69,7 @@
       contents = {
         user.name = "roemu";
         user.email = "20roman.suter02@gmail.com";
-        user.signingkey = "~/.ssh/id_ed25519.pub";
+        user.signingkey = "~/.ssh/id_ed25519";
       };
     }
   ];
