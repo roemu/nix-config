@@ -10,7 +10,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs.ssh.enable = true;
     programs.ssh.enableDefaultConfig = false; # Deprecated in the future, thus removed already
-    programs.ssh.matchBlocks = {
+    programs.ssh.settings = {
       "nix-artemis" = {
         hostname = "100.64.0.1";
         user = "roemu";
