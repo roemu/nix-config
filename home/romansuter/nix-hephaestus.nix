@@ -24,6 +24,7 @@
     pkgs.rustc
     pkgs.rustfmt
     pkgs.raycast
+    pkgs.just
   ];
 
   catppuccin.autoEnable = true;
