@@ -1,5 +1,5 @@
 return {
-  'barrettruth/canola.nvim', -- NOTE: stevearc/oil.nvim is not very actively maintained, this is a community managed fork
+  'https://forge.barrettruth.com/barrettruth/canola.nvim', -- NOTE: stevearc/oil.nvim is not very actively maintained, this is a community managed fork
   branch = 'canola',
   lazy = false,
   keys = {
