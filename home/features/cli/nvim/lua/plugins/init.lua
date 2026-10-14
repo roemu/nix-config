@@ -15,16 +15,16 @@ return {
             prompt_end = " ❯ ",
         },
     },
-    {
-        'numToStr/Comment.nvim',
-        opts = {},
-        event = "VeryLazy",
-        init = function()
-            local ft = require "Comment.ft"
-            ft({ 'htmlangular' }, ft.get('html'))
-            ft({ 'sql' }, '-- %s')
-        end
-    },
+    -- {
+    --     'numToStr/Comment.nvim',
+    --     opts = {},
+    --     event = "VeryLazy",
+    --     init = function()
+    --         local ft = require "Comment.ft"
+    --         ft({ 'htmlangular' }, ft.get('html'))
+    --         ft({ 'sql' }, '-- %s')
+    --     end
+    -- },
     {
         'nvim-tree/nvim-web-devicons',
         event = "VeryLazy",
