@@ -1,1 +1,1 @@
-vim.bo.commenstring = "<!-- %s -->"
+vim.bo.commentstring = "<!-- %s -->"
